@@ -1,4 +1,4 @@
-vagrant@server03:~$ cat /etc/network/interfaces
+
 auto eth0
 iface eth0 inet dhcp
 
