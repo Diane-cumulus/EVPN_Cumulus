@@ -2,7 +2,7 @@ This Github repository contains the configuration files necessary for setting up
 
 This demo is equivalent to the scenario in the MAC+IP Address learning section of the Cumulus EVPN for Controller-less VXLAN whitepaper at https://cumulusnetworks.com/learn/web-scale-networking-resources/whitepapers/Cumulus-Networks-White-Paper-EVPN.pdf
 
-The flatfiles in this repository will set up a BGP unnumbered along with the IPv4, V6, and EVPN address family between the leafs and spines.  The servers will have a basic IPv4 and IPv6 configuration.  Server01 and O4 are in one VLAN/VXLAN, and servers 02 and 03 are in a different VLAN/VXLAN.
+The flatfiles in this repository will set up a BGP unnumbered along with the IPv4, V6, and EVPN address family between the leafs and spines.  The servers will have a basic IPv4 and IPv6 configuration.  Server01 and 04 are in one VLAN/VXLAN, and servers 02 and 03 are in a different VLAN/VXLAN.
 
 Quickstart: Run the demo
 ------------------------
