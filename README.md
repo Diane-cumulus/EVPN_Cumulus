@@ -1,4 +1,4 @@
-This Github repository contains the configuration files necessary for setting up EVPN using Cumulus Linux and Quagga on the Reference Topology.
+This Github repository contains the configuration files necessary for setting up EVPN using Cumulus Linux and Free Range Routing on the Reference Topology.
 
 This demo is equivalent to the scenario in the MAC+IP Address learning section of the Cumulus EVPN for Controller-less VXLAN whitepaper at https://cumulusnetworks.com/learn/web-scale-networking-resources/whitepapers/Cumulus-Networks-White-Paper-EVPN.pdf
 
