@@ -1,0 +1,65 @@
+# The loopback network interface
+auto lo
+iface lo inet loopback
+    address 10.1.1.2/32
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+
+auto swp1
+iface swp1
+    alias connected to server01
+    bridge-access 20
+
+auto swp2
+iface swp2
+    alias connected to server02
+    bridge-access 10
+
+auto swp51
+iface swp51
+
+auto swp52
+iface swp52
+
+auto bridge
+iface bridge
+    bridge-ports swp1 swp2 vxlan_10 vxlan_20
+    bridge-vids 10-20
+    bridge-vlan-aware yes
+
+auto vxlan_10
+iface vxlan_10
+    bridge-access 10
+    bridge-arp-nd-suppress on
+    mstpctl-bpduguard yes
+    mstpctl-portbpdufilter yes
+    vxlan-id 10100
+    bridge-learning off
+    vxlan-local-tunnelip 10.1.1.2
+
+auto vxlan_20
+iface vxlan_20
+    bridge-access 20
+    bridge-arp-nd-suppress on
+    mstpctl-bpduguard yes
+    mstpctl-portbpdufilter yes
+    vxlan-id 10200
+    bridge-learning off
+    vxlan-local-tunnelip 10.1.1.2
+
+auto vlan_10
+iface vlan_10
+    ip-forward off
+    ip6-forward off
+    vlan-id 10
+    vlan-raw-device bridge
+
+auto vlan_20
+iface vlan_20
+    ip-forward off
+    ip6-forward off
+    vlan-id 20
+    vlan-raw-device bridge
+

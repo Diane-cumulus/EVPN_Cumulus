@@ -1,0 +1,12 @@
+auto eth0
+iface eth0 inet dhcp
+
+
+auto eth1
+iface eth1 inet static
+    address 172.16.20.4/24 
+
+auto eth1
+iface eth1 inet6 static
+    address fd00::24/124
+

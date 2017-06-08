@@ -1,0 +1,13 @@
+vagrant@server03:~$ cat /etc/network/interfaces
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+    address 172.16.10.3/24
+
+auto eth1
+iface eth1 inet6 static
+    address fd00::13/124
+   
+
