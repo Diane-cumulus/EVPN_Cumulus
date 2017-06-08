@@ -4,22 +4,27 @@ This demo is equivalent to the scenario in the MAC+IP Address learning section o
 
 The flatfiles in this repository will set up a BGP unnumbered along with the IPv4, V6, and EVPN address family between the leafs and spines.  The servers will have a basic IPv4 and IPv6 configuration.  Server01 and 04 are in one VLAN/VXLAN, and servers 02 and 03 are in a different VLAN/VXLAN.
 
+
 Quickstart: Run the demo
 ------------------------
 
 Before running this demo, install VirtualBox and Vagrant. The currently supported versions of VirtualBox and Vagrant can be found on the cldemo-vagrant.
 
-git clone https://github.com/cumulusnetworks/cldemo-vagrant
-cd cldemo-vagrant
-vagrant up oob-mgmt-server oob-mgmt-switch 
-vagrant up leaf02 leaf03 spine01 spine02 server01 server02 server03 server04
-vagrant ssh oob-mgmt-server
-sudo su - cumulus
-git clone https://github.com/cumulusnetworks/cldemo-config-evpn-paper
-cd cldemo-config-mlag
-ansible-playbook deploy.yml
-ssh server01
-ping 172.16.20.4
+    git clone https://github.com/cumulusnetworks/cldemo-vagrant
+    cd cldemo-vagrant
+    vagrant up oob-mgmt-server oob-mgmt-switch 
+    vagrant up leaf02 leaf03 spine01 spine02 server01 server02 server03 server04
+    vagrant ssh oob-mgmt-server
+    sudo su - cumulus
+    git clone https://github.com/cumulusnetworks/cldemo-config-evpn-paper
+    cd cldemo-config-evpn-paper
+    ansible-playbook deploy.yml
+    ssh server01
+    ping 172.16.20.4 
+
+
+
+
 
 ## Topology ##
 
