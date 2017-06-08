@@ -1,14 +1,15 @@
-This Github repository contains the configuration files necessary for setting up EVPN using Cumulus Linux and Free Range Routing on the Reference Topology.
+This Github repository contains the configuration files necessary for setting up EVPN using Cumulus Linux and Quagga on the Reference Topology.
 
-This demo is equivalent to the scenario in the MAC+IP Address learning section of the Cumulus EVPN for Controller-less VXLAN whitepaper at https://cumulusnetworks.com/learn/web-scale-networking-resources/whitepapers/Cumulus-Networks-White-Paper-EVPN.pdf
+This demo is equivalent to the scenario in the MAC+IP Address learning section of the [Cumulus EVPN for Controller-less VXLAN whitepaper](https://cumulusnetworks.com/learn/web-scale-networking-resources/whitepapers/Cumulus-Networks-White-Paper-EVPN.pdf) 
 
 The flatfiles in this repository will set up a BGP unnumbered along with the IPv4 and EVPN address family between the leafs and spines.  The servers will have a basic IPv4 and IPv6 configuration.  Server01 and 04 are in one VLAN/VXLAN, and servers 02 and 03 are in a different VLAN/VXLAN.
 
+The demo shows the EVPN address family advertising MAC + IPv4 and MAC + IPv6 addresses with ARP suppression.
 
 Quickstart: Run the demo
 ------------------------
 
-Before running this demo, install VirtualBox and Vagrant. The currently supported versions of VirtualBox and Vagrant can be found on the cldemo-vagrant.
+Before running this demo, install VirtualBox and Vagrant. The currently supported versions of VirtualBox and Vagrant can be found on the [cldemo-vagrant](https://github.com/CumulusNetworks/cldemo-vagrant) page.
 
     git clone https://github.com/cumulusnetworks/cldemo-vagrant
     cd cldemo-vagrant
