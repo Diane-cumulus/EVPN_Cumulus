@@ -22,5 +22,5 @@
   tasks:
     - name: copy interfaces
       copy: src=config/{{ansible_hostname}}/interfaces dest=/etc/network/      
-    - name: restarts servers with their new configuration
+    - name: restarts networking with their new configuration
       command: ifreload -a
