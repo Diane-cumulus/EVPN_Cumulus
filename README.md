@@ -22,7 +22,7 @@ Before running this demo, install VirtualBox and Vagrant. The currently supporte
     ansible-playbook deploy.yml
     ssh server01
     ping 172.16.20.4
-    ping6 -I eth2 fd::24
+    ping6 -I eth2 fd00::24
 
 
 
