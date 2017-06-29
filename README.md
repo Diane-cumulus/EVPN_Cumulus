@@ -17,11 +17,12 @@ Before running this demo, install VirtualBox and Vagrant. The currently supporte
     vagrant up leaf02 leaf03 spine01 spine02 server01 server02 server03 server04
     vagrant ssh oob-mgmt-server
     sudo su - cumulus
-    git clone https://github.com/Diane-cumulus/EVPN_Cumulus
-    cd EVPN_Cumulus 
+    git clone https://github.com/Diane-cumulus/EVPN_Cumulus_Whitepaper
+    cd EVPN_Cumulus_Whitepaper 
     ansible-playbook deploy.yml
     ssh server01
-    ping 172.16.20.4 
+    ping 172.16.20.4
+    ping6 -I eth2 fd::24
 
 
 
